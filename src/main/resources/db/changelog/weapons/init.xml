@@ -1,0 +1,36 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="826de7f2-6c40-5f70-acde-1237cba3efbf" author="user">
+        <createTable tableName="WEAPONS">
+            <column name="id" type="varchar">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar">
+            </column>
+            <column name="image" type="varchar">
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="136de7f2-6c40-5f70-acde-1237cba3efbf" author="user">
+        <insert tableName="WEAPONS">
+            <column name="id" value="23123"/>
+            <column name="name" value="AWP | Dragon Lore"/>
+            <column name="image" value="***URL***"/>
+        </insert>
+        <insert tableName="WEAPONS">
+            <column name="id" value="31213134"/>
+            <column name="name" value="AK-47 | Vulcan"/>
+            <column name="image" value="***URL***"/>
+        </insert>
+        <insert tableName="WEAPONS">
+            <column name="id" value="4434134e131"/>
+            <column name="name" value="Karambit | Doppler"/>
+            <column name="image" value="***URL***"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

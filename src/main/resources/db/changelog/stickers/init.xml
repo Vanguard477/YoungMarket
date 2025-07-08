@@ -1,0 +1,29 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="426de7f2-6c40-6f70-acde-1337cba3efbf" author="user">
+        <createTable tableName="STICKERS">
+            <column name="id" type="varchar">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar">
+            </column>
+            <column name="sticker_quality" type="varchar">
+            </column>
+            <column name="image" type="varchar">
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="316de7f2-6c40-5f70-acde-1237cba3efbf" author="user">
+        <insert tableName="STICKERS">
+            <column name="id" value="1"/>
+            <column name="name" value="Sticker | Crown"/>
+            <column name="sticker_quality" type="Foil"/>
+            <column name="image" value="***URL***"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

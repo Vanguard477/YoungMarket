@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="126de7f2-6c40-5f70-acde-1237cba3efbf" author="user">
+        <createTable tableName="WEAPONS_STICKERS">
+            <column name="id" type="varchar">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="quantity" type="int">
+            </column>
+            <column name="user_weapon_id" type="varchar">
+                <constraints nullable="false" foreignKeyName="weapons_stickers_user_weapon_id"
+                             references="USER_WEAPONS(ID)" deleteCascade="true"/>
+            </column>
+            <column name="sticker_id" type="varchar">
+                <constraints nullable="false" foreignKeyName="weapons_stickers_sticker_id"
+                             references="STICKERS(ID)" deleteCascade="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
